@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
@@ -20,12 +21,14 @@ public class Main extends Application  {
 
         Button button = new Button("Button");
 
-        button.setStyle( "-fx-font-size: 2em;");
+        button.setStyle( "-fx-font-size: 4em;");
         
         HBox hbox = new HBox(button);
 
+        hbox.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(hbox, 400, 300);
+
+        Scene scene = new Scene(hbox, 500, 500);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -33,4 +36,7 @@ public class Main extends Application  {
     public static void main(String[] args) {
         Application.launch(args);
     }
+
+
+
 }
